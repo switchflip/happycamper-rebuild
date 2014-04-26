@@ -1,0 +1,9 @@
+<template name="listsIndex">
+  <ul>
+    {{#each lists}}
+      <li>
+        <a href="{{pathFor 'listShow'}}">{{name}}</a>
+      </li>
+    {{/each}}
+  </ul>
+</template>

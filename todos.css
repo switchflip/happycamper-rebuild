@@ -1,0 +1,19 @@
+/* CSS declarations go here */
+.items {
+  max-width: 600px;
+  padding-left: 0;
+}
+.items > li {
+  clear: both;
+  display: block;
+}
+
+.item-menu {
+  float: right;
+  list-style-type: none;
+  padding-left: 0;
+}
+.item-menu > li {
+  display: inline-block;
+  margin-bottom: 5px;
+}

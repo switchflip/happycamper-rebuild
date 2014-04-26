@@ -1,0 +1,12 @@
+<template name="item">
+  <li>
+    {{text}}
+
+    <ul class="menu item-menu">
+      <li><button class="btn btn-sm btn-primary" id="edit">Edit</button></li>
+      <li><button class="btn btn-sm btn-primary" id="assign">Assign to User</button></li>
+      <li><button class="btn btn-sm btn-danger" id="remove">Remove</button></li>
+      <li><button class="btn btn-sm btn-warning {{#if sticky}}btn-disabled{{/if}}" id="favorite">Favorite</button></li>
+    </ul>
+  </li>
+</template>
