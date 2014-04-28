@@ -33,6 +33,7 @@ Template.item.events({
         created_at: new Date,
         user_id: user
       });
+      $('form').trigger("reset");
     } else {
       alert("Quanity must be greater than 0.")
     }
