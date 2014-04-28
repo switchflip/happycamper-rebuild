@@ -1,3 +1,17 @@
+  // 'submit form': function (e, tmpl) {
+  //     e.preventDefault();
+  //
+  //     var subject = tmpl.find('input').value;
+  //
+  //     Todos.insert({
+  //       subject: subject,
+  //       created_at: new Date,
+  //       is_done: false,
+  //       user_id: Meteor.userId()
+  //     });
+
+
+
 Template.item.helpers({
   isSticky: function() {
     return this.sticky;
@@ -5,12 +19,31 @@ Template.item.helpers({
 })
 
 Template.item.events({
+  // submit item
+  'click button[type=submit]': function(e, tmpl) {
+    e.preventDefault();
+    var user = Meteor.userId();
+    var type = tmpl.find('#itemType').value;
+    var quantity = tmpl.find('#itemQuantity').value;
+
+    if  (quantity >= 1) {
+      Items.insert({
+        type: type,
+        quantity: quantity,
+        created_at: new Date,
+        user_id: user
+      });
+    } else {
+      alert("Quanity must be greater than 0.")
+    }
+  },
+
   // edit item
   'click #edit': function(e) {
     e.preventDefault();
   },
-  // remove item
-  'click #remove': function(e) {
+  // delete item
+  'click #delete': function(e) {
     e.preventDefault();
 
     if (confirm("Remove this item?")) {

@@ -1,12 +1,28 @@
 <template name="item">
-  <li>
-    {{text}}
+  <h2>Add an item</h2>
+  <p>
+    Enter items into your personal inventory. At any point you can decide to add, remove, edit any items.
+  </p>
 
-    <ul class="menu item-menu">
-      <li><button class="btn btn-sm btn-primary" id="edit">Edit</button></li>
-      <li><button class="btn btn-sm btn-primary" id="assign">Assign to User</button></li>
-      <li><button class="btn btn-sm btn-danger" id="remove">Remove</button></li>
-      <li><button class="btn btn-sm btn-warning {{#if sticky}}btn-disabled{{/if}}" id="favorite">Favorite</button></li>
-    </ul>
-  </li>
+
+  <form class="form-inline" role="form">
+    <div class="form-group">
+      <label class="sr-only" for="itemType">Item</label>
+      <input type="text" class="form-control" id="itemType" placeholder="Item type" required>
+    </div>
+    <div class="form-group">
+      <label class="sr-only" for="itemQuantity">Item Quantity</label>
+      <input type="number" class="form-control" id="itemQuantity" placeholder="Quantity" required>
+    </div>
+    <button type="submit" class="btn btn-sm btn-success">Add Item</button>
+  </form>
+
+  <h2>Your Gear</h2>
+  <ul class="list-unstyled">
+    {{#each items}}
+      {{>inventoryItem}}
+    {{else}}
+        <li class="danger">No items in your inventory yet.</li>
+    {{/each}}
+  </ul>
 </template>

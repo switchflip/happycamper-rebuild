@@ -1,9 +1,12 @@
 <template name="listsIndex">
-  <ul>
-    {{#each lists}}
-      <li>
-        <a href="{{pathFor 'listShow'}}">{{name}}</a>
-      </li>
-    {{/each}}
-  </ul>
+  <div class="row-fluid">
+    <h2>Items</h2>
+    <ul>
+      {{#each lists}}
+        <li>
+          <a href="{{pathFor 'listShow'}}">{{name}}</a>
+        </li>
+      {{/each}}
+    </ul>
+  </div>
 </template>
