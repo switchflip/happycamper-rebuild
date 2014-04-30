@@ -1,17 +1,3 @@
-  // 'submit form': function (e, tmpl) {
-  //     e.preventDefault();
-  //
-  //     var subject = tmpl.find('input').value;
-  //
-  //     Todos.insert({
-  //       subject: subject,
-  //       created_at: new Date,
-  //       is_done: false,
-  //       user_id: Meteor.userId()
-  //     });
-
-
-
 Template.item.helpers({
   isSticky: function() {
     return this.sticky;

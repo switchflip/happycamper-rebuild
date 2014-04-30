@@ -6,5 +6,5 @@ Meteor.publish('singleList', function(id) {
 })
 
 Meteor.publish('items', function(listId, options) {
-  return Items.find({listId: listId}, options);
+  return Items.find({user_id: this.userId});
 });
