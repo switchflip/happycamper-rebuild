@@ -21,10 +21,13 @@
       <div class="table-responsive fow-fluid">
         <table class="table table-striped table-condensed table-hover">
           <tbody>
-            {{#each items}}
             <tr>
-              {{>inventoryItem}}
+              <th>Name</th>
+              <th>Quantity</th>
+              <th>Actions</th>
             </tr>
+            {{#each items}}
+              {{>inventoryItem}}
             {{else}}
               No items in your inventory yet. Add items above!
             {{/each}}
