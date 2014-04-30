@@ -4,13 +4,14 @@
     "basePackages": {
       "iron-router": {},
       "bootstrap-3": {},
-      "accounts-ui-bootstrap-3": {}
+      "accounts-ui-bootstrap-3": {},
+      "iron-router-auth": {}
     },
     "packages": {
       "iron-router": {
         "git": "https://github.com/EventedMind/iron-router.git",
-        "tag": "v0.7.0",
-        "commit": "05f34bc48c4cad9fdaa366c1ddcabe6980232ece"
+        "tag": "v0.7.1",
+        "commit": "d1ffb3f06ea4c112132b030f2eb1a70b81675ecb"
       },
       "bootstrap-3": {
         "git": "https://github.com/mangasocial/meteor-bootstrap-3.git",
@@ -22,10 +23,15 @@
         "tag": "v0.3.0-1",
         "commit": "93ffa5d0e325dc7026de89f6d90c178fa04bdd3a"
       },
+      "iron-router-auth": {
+        "git": "https://github.com/XpressiveCode/iron-router-auth.git",
+        "tag": "v0.2.0",
+        "commit": "f868799c5b6511813abe1b3d3ed29f25f10099a0"
+      },
       "blaze-layout": {
         "git": "https://github.com/EventedMind/blaze-layout.git",
-        "tag": "v0.2.2",
-        "commit": "8bc53798fe5965669ae67c72f91829fcfdceabfd"
+        "tag": "v0.2.4",
+        "commit": "b40e9b0612329288d75cf52ad14a7da64bb8618f"
       }
     }
   }

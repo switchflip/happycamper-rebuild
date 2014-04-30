@@ -9,7 +9,7 @@ Template.item.events({
   'click button[type=submit]': function(e, tmpl) {
     e.preventDefault();
     var user = Meteor.userId();
-    var type = tmpl.find('#itemType').value;
+    var type = tmpl.find('#itemType').value.toLowerCase();
     var quantity = tmpl.find('#itemQuantity').value;
 
     if  (quantity >= 1) {
