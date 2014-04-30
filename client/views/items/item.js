@@ -17,7 +17,8 @@ Template.item.events({
         type: type,
         quantity: quantity,
         created_at: new Date,
-        user_id: user
+        user_id: user,
+        is_shared: false
       });
       $('form').trigger("reset");
     } else {
@@ -28,14 +29,26 @@ Template.item.events({
   // edit item
   'click #edit': function(e) {
     e.preventDefault();
+
+    var id = this._id;
+    var title = this.type;
+    var quanity = this.quantity;
+    debugger;
+
   },
   // delete item
   'click #delete': function(e) {
     e.preventDefault();
 
-    if (confirm("Remove this item?")) {
-      Items.remove(this._id);
-    }
+    Items.remove(this._id);
+    console.log("Item " + this._id + " was deleted.")
+  },
+  // share item
+  'click #share': function(e) {
+    e.preventDefault();
+    $(e.target).toggleClass('active');
+    this.is_shared = this.is_shared ? false : true
+    console.log(this.is_shared);
   },
   // star item
   'click #favorite': function(e) {
