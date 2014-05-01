@@ -12,7 +12,7 @@ Template.item.events({
     var type = tmpl.find('#itemType').value.toLowerCase();
     var quantity = tmpl.find('#itemQuantity').value;
 
-    if  (quantity >= 1) {
+    if  (quantity >= 1 ) {
       Items.insert({
         type: type,
         quantity: quantity,
@@ -22,7 +22,7 @@ Template.item.events({
       });
       $('form').trigger("reset");
     } else {
-      alert("Quanity must be greater than 0.")
+      alert("Please enter a valid number.")
     }
   },
 
