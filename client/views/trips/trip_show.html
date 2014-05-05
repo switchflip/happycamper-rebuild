@@ -1,3 +1,39 @@
 <template name="tripShow">
-  <h1>{{name}}</h1>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h2 class="panel-title">Trip Information</h2>
+    </div>
+    <div class="panel-body">
+      <div class="row">
+        <div class="col-xs-5">
+          <h1>{{name}}</h1>
+          <h2>Who's coming?</h2>
+        </div>
+        <div class="col-xs-3">
+          Weather Forecast
+        </div>
+        <div class="col-xs-4" id="map-canvas" style="height:300px;float:right;"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-6">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <div class="panel-title">Trip Inventory</div>
+        </div>
+        <div class="panel-body"></div>
+      </div>
+    </div>
+    <div class="col-xs-6">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <div class="panel-title">Personal Inventory</div>
+        </div>
+        <div class="panel-body"></div>
+      </div>
+    </div>
+  </div>
+
 </template>
