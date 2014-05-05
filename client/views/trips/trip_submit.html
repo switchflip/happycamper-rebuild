@@ -1,0 +1,26 @@
+<template name="tripSubmit">
+  <form class="">
+    <div class="form-group">
+      <label for="trip-name">Name:</label>
+      <input class="form-control" id="trip-name" type="text" value="" placeholder="Your trip name">
+    </div>
+    <div class="form-group">
+      <label for="trip-location">Location:</label>
+      <input class="form-control" id="trip-location" type="text" value="" placeholder="Your trip location">
+    </div>
+    <div class="form-group">
+      <label for="trip-date-start">Start Date:</label>
+      <input class="form-control" id="trip-date-start" type="text" value="" placeholder="The day you plan to leave">
+    </div>
+    <div class="form-group">
+      <label for="trip-date-end">End Date:</label>
+      <input class="form-control" id="trip-date-end" type="text" value="" placeholder="The day you plan to come home">
+    </div>
+    <div class="form-group">
+      <div id="map-canvas" style="width:100%;height:400px;"></div>
+    </div>
+    <div class="form-group">
+      <input type="submit" value="Create Trip" class="btn btn-primary">
+    </div>
+  </form>
+</template>

@@ -6,7 +6,9 @@
       "bootstrap-3": {},
       "accounts-ui-bootstrap-3": {},
       "iron-router-auth": {},
-      "spin": {}
+      "spin": {},
+      "leaflet": {},
+      "googlemaps": {}
     },
     "packages": {
       "iron-router": {
@@ -33,6 +35,16 @@
         "git": "https://github.com/SachaG/meteor-spin.git",
         "tag": "v0.2.2",
         "commit": "3f655f0016228e4195acc784c45d3e3a247dc39f"
+      },
+      "leaflet": {
+        "git": "https://github.com/bevanhunt/meteor-leaflet.git",
+        "tag": "v0.3.6",
+        "commit": "d9e3bdb824145c1078e52945909bb1cf38724da5"
+      },
+      "googlemaps": {
+        "git": "https://github.com/drewjw81/meteor-googlemaps.git",
+        "tag": "v0.0.2",
+        "commit": "da8785c82cfd7de0111f898ef10728e7ed24e361"
       },
       "blaze-layout": {
         "git": "https://github.com/EventedMind/blaze-layout.git",

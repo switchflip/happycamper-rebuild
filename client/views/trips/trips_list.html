@@ -1,0 +1,8 @@
+<template name="tripsList">
+  <h1>Trips</h1>
+  <ul>
+    {{#each trips}}
+      <li><a href="{{pathFor 'tripShow'}}">{{name}}</a></li>
+    {{/each}}
+  </ul>
+</template>

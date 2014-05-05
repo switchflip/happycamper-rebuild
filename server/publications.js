@@ -9,3 +9,10 @@ Meteor.publish('items', function(listId, options) {
   // only returns currentUsers' items
   return Items.find({user_id: this.userId}, {sort: {created_at: -1}});
 });
+
+Meteor.publish('trips', function(options) {
+  return Trips.find({}, options);
+});
+Meteor.publish('singleTrip', function(id) {
+  return id && Trips.find(id);
+})
