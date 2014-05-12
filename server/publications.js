@@ -10,9 +10,11 @@ Meteor.publish('items', function(listId, options) {
   return Items.find({user_id: this.userId}, {sort: {created_at: -1}});
 });
 
+
 Meteor.publish('trips', function(options) {
-  return Trips.find({}, options);
+  return Trips.find({owner: this.userId}, options);
 });
+
 Meteor.publish('singleTrip', function(id) {
   return id && Trips.find(id);
 })

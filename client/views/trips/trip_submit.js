@@ -1,8 +1,10 @@
 Template.tripSubmit.events({
     'submit form': function(e) {
       e.preventDefault();
+      var user = Meteor.userId();
 
       var trip = {
+        owner: user,
         name: $(e.target).find('#trip-name').val(),
         location: $(e.target).find('#trip-location').val(),
         dateStart: $(e.target).find('#trip-date-start').val(),
