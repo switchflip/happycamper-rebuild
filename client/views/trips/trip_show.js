@@ -1,4 +1,3 @@
-
 Template.tripShow.rendered = function() {
 
   GoogleMaps.init({
@@ -15,5 +14,10 @@ Template.tripShow.rendered = function() {
       map.setCenter(new google.maps.LatLng( 43.65323, -79.38318 ));
     }
   );
-
 };
+
+Template.tripShow.helpers({
+  items: function(){
+    return Items.find({});
+  }
+});

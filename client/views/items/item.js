@@ -33,22 +33,17 @@ Template.item.events({
     var id = this._id;
     var title = this.type;
     var quanity = this.quantity;
-    debugger;
-
   },
   // delete item
   'click #delete': function(e) {
     e.preventDefault();
-
     Items.remove(this._id);
-    console.log("Item " + this._id + " was deleted.")
   },
   // share item
   'click #share': function(e) {
     e.preventDefault();
     $(e.target).toggleClass('active');
     this.is_shared = this.is_shared ? false : true
-    console.log(this.is_shared);
   },
   // star item
   'click #favorite': function(e) {
